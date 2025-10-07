@@ -1,0 +1,54 @@
+/* src/components/About.css */
+
+/* subtle grid / diagonal lines similar to the Hero feel */
+.about-grid {
+  background-image:
+    linear-gradient(90deg, rgba(176,171,152,0.03) 1px, transparent 1px),
+    linear-gradient(rgba(176,171,152,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.35;
+}
+
+/* menu look */
+.about-menu {
+  background: rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(2px);
+  width: 18rem; /* matches Tailwind w-72 */
+}
+
+.menu-item {
+  border-left: 2px solid transparent;
+  transition: all 180ms ease;
+  color: rgba(195,189,168,0.9);
+}
+
+.menu-item .w-3 {
+  border-color: rgba(176,171,152,0.6);
+}
+
+.menu-item--active {
+  background: rgba(176,171,152,0.06);
+  color: #c3bda8; /* textPrimary */
+  border-left-color: rgba(176,171,152,0.9);
+}
+
+.menu-item--active .w-3 {
+  background: #b0ab98;
+  border-color: #b0ab98;
+}
+
+/* panel */
+.about-panel {
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+  backdrop-filter: blur(1px);
+}
+
+/* small responsive adjustments */
+@media (max-width: 768px) {
+  .about-menu {
+    width: 14rem;
+  }
+  .about-panel {
+    margin-left: 0;
+  }
+}
